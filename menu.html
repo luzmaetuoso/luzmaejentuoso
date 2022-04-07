@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Classic Smoothies</title>
+		
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/nav.css" />
+		<link rel="stylesheet" href="css/body.css" />
+		<link rel="stylesheet" href="css/footer.css" />
+		<style>
+			@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+			@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+			
+			li {
+				margin-top: 10px;
+				margin-bottom: 30px;
+			}
+		</style>
+		<!---For The Shrink Down Scroll of Navigation Bar--->
+		<script>
+			// When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
+			window.onscroll = function() {scrollFunction()};
+			
+			function scrollFunction() {
+				if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+				document.getElementById("navbar").style.padding = "20px 10px";
+				document.getElementById("logo").style.fontSize = "25px";
+				} else {
+				document.getElementById("navbar").style.padding = "80px 10px";
+				document.getElementById("logo").style.fontSize = "55px";
+				}
+			}
+
+			var x, i, j, l, ll, selElmnt, a, b, c;
+			
+			/*look for any elements with the class "custom-select":*/
+			x = document.getElementsByClassName("custom-select");
+			l = x.length;
+				for (i = 0; i < l; i++) {
+					selElmnt = x[i].getElementsByTagName("select")[0];
+					ll = selElmnt.length;
+					/*for each element, create a new DIV that will act as the selected item:*/
+					a = document.createElement("DIV");
+					a.setAttribute("class", "select-selected");
+					a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
+					x[i].appendChild(a);
+					/*for each element, create a new DIV that will contain the option list:*/
+					b = document.createElement("DIV");
+					b.setAttribute("class", "select-items select-hide");
+					for (j = 1; j < ll; j++) {
+						/*for each option in the original select element,
+						create a new DIV that will act as an option item:*/
+						c = document.createElement("DIV");
+						c.innerHTML = selElmnt.options[j].innerHTML;
+						c.addEventListener("click", function(e) {
+							/*when an item is clicked, update the original select box,
+							and the selected item:*/
+							var y, i, k, s, h, sl, yl;
+							s = this.parentNode.parentNode.getElementsByTagName("select")[0];
+							sl = s.length;
+							h = this.parentNode.previousSibling;
+							for (i = 0; i < sl; i++) {
+								if (s.options[i].innerHTML == this.innerHTML) {
+									s.selectedIndex = i;
+									h.innerHTML = this.innerHTML;
+									y = this.parentNode.getElementsByClassName("same-as-selected");
+									yl = y.length;
+									for (k = 0; k < yl; k++) {
+										y[k].removeAttribute("class");
+									}
+									this.setAttribute("class", "same-as-selected");
+									break;
+								}
+							}
+							h.click();
+						});
+						b.appendChild(c);
+					}
+					x[i].appendChild(b);
+					a.addEventListener("click", function(e) {
+						/*when the select box is clicked, close any other select boxes,
+						and open/close the current select box:*/
+						e.stopPropagation();
+						closeAllSelect(this);
+						this.nextSibling.classList.toggle("select-hide");
+						this.classList.toggle("select-arrow-active");
+					});
+				}
+				function closeAllSelect(elmnt) {
+					/*a function that will close all select boxes in the document,
+					except the current select box:*/
+					var x, y, i, xl, yl, arrNo = [];
+					x = document.getElementsByClassName("select-items");
+					y = document.getElementsByClassName("select-selected");
+					xl = x.length;
+					yl = y.length;
+					for (i = 0; i < yl; i++) {
+						if (elmnt == y[i]) {
+							arrNo.push(i)
+						} else {
+							y[i].classList.remove("select-arrow-active");
+						}
+					}
+					for (i = 0; i < xl; i++) {
+						if (arrNo.indexOf(i)) {
+							x[i].classList.add("select-hide");
+						}
+					}
+				}
+				/*if the user clicks anywhere outside the select box,
+				then close all select boxes:*/
+				document.addEventListener("click", closeAllSelect);
+		</script>
+	</head>
+	<body>
+		<div id="navbar">
+			<a href="index.html" id="logo">Jamba</a>
+			<div id="navbar-right">
+				<a href ="about.html">About</a>
+				<a href="contact.html">Contact Us</a>
+				<a class="active" href ="menu.html">Menu</a>
+			</div>
+		</div>
+		<div>
+			
+			<div class="class_mnu">
+					<table border="3">
+						<thead>
+							<tr>
+								<img src="sm2.jpg" height=3% width=10% style="display: inline;float:left;margin-left:50px;margin-top:240px">
+								<h3>PRODUCT (CLASSIC SMOOTHIES)</h3> <br />
+							</tr>	
+						</thead>
+						
+						<tbody class="secmnu">
+							<tr class="prodname">
+								<td rowspan="2"><center><img src="img/EBL_smoothie.jpg "></center></td>
+								<th colspan="2" style="background-color: rgb(181, 207, 255);border:none">Electric Berry Lemonade</th>
+								<td rowspan="2"><center><img src="img/watermelonbreeze_smoothie.jpg " ></center></td>
+								<th colspan="2" style="background-color: rgb(251, 199, 207);border:none">Watermelon Breeze</th>
+							</tr>
+							<tr>
+								<td colspan="2" style="background-color: rgb(156, 176, 255);border:none">
+									<ul>
+										<li>lemonade</li>
+										<li>strawberries</li>
+										<li>grape pear berry juice blendfat</li>
+										<li>free vanilla frozen yogurt</li>
+										<li>raspberry sherbet</li>
+									</ul>
+									<a href="/" class="customize">CUSTOMIZED ORDER</a> <br />
+									<a href="/" class="order">ORDER</a>
+								</td>
+								<td style="background-color: rgb(255, 140, 157);border:none">
+									<ul>
+										<li>watermelon grape</li>
+										<li>juice blend</li>
+										<li>raspberry sherbet</li>
+										<li>strawberries</li>
+										<li>pineapples</li>
+									</ul>
+									<a href="/" class="customize">CUSTOMIZED ORDER</a> <br />
+									<a href="/" class="order">ORDER</a>
+								</td>
+							</tr>
+						</tbody>
+						<tbody class="secmnu2">
+							<tr>
+								<td rowspan="2"><center><img src="img/aloha pineapple.jpg "></center></td>
+								<th colspan="2" style="background-color: rgb(255, 205, 225);border:none">Aloha Pineapples</th>
+								<td rowspan="2"><center><img src="img/caribbean passion.jpg "></center></td>
+								<th style="background-color: rgb(255, 176, 154);border:none">Caribbean Passion</th>
+							</tr>
+							<tr>
+								<td colspan="2" style="background-color: rgb(255, 182, 222);border:none">
+									<ul>
+										<li>pineapple juice</li>
+										<li style="display: flex;"> </li>
+										<li>pineapple sherbet</li>
+										<li style="display: flex;"> </li>
+										<li>strawberries</li>
+										<li style="display: flex;"> </li>
+										<li>bananas</li>
+										<li style="display: flex;"> </li>
+										
+										<li>nonfat Greek yogurt</li>
+									</ul>
+									<a href="/" class="customize">CUSTOMIZED ORDER</a> <br />
+									<a href="/" class="order">ORDER</a>
+								</td>
+								<td style="background-color: rgb(255, 161, 134);border:none">
+									<ul>
+										<li>pear white grape</li>
+										<li>mango</li>
+										<li>orange passion</li>
+										<li>juice blend</li>
+										<li>orange sherbet</li>
+										<li>strawberries</li>
+										<li>peaches</li>
+									</ul>
+									<a href="/" class="customize">CUSTOMIZED ORDER</a> <br />
+									<a href="/" class="order">ORDER</a>
+								</td>
+							</tr>
+						</tbody>
+
+						<tbody class="secmnu3">
+							<tr>
+								<td rowspan="2"><center><img src="img/lychee dream smoothie.jpg "></center></td>
+								<th colspan="2" style="background-color: rgb(227, 192, 182);border:none">Lychee Dream</th>
+								<td rowspan="2"><center><img src="img/mangoagogo_smoothie.jpg "></center></td>
+								<th style="background-color: rgb(249, 222, 181);border:none">Whirl'D Famous!    Mango-a-go-go</th>
+								
+							</tr>
+							<tr>
+								<td colspan="2" style="background-color: rgb(212, 156, 141);border:none">
+									<ul>
+										<li>available in hawaii stores only</li>
+										<li>vanilla soymilk</li>
+										<li>fat free vanilla frozen yogurt</li>
+										<li>white grape pear peach juice blend</li>
+										<li>raspberry sherbet</li>
+									</ul>
+									<a href="/" class="customize">CUSTOMIZED ORDER</a> <br />
+									<a href="/" class="order">ORDER</a>
+								</td>
+								<td style="background-color: rgb(246, 200, 137);border:none">
+									<ul>
+										<li>pear white grape</li>
+										<li>mango</li>
+										<li>orange passion juice blend</li>
+										<li>mangos</li>
+										<li>pineapple sherbet</li>
+									</ul>
+									<a href="/" class="customize">CUSTOMIZED ORDER</a> <br />
+									<a href="/" class="order">ORDER</a>
+								</td>
+							</tr>
+						</tbody>
+
+						<tbody class="secmnu4">
+							<tr>
+								<td rowspan="2"><center><img src="img/orangedreammachine_smoothie.jpg "></center></td>
+								<th colspan="2" style="background-color: rgb(255, 209, 130);border:none">Orange Dream Machine</th>
+								<td rowspan="2"><center><img src="img/peanut butter moon.jpg "></center></td>
+								<th style="background-color: rgb(170, 146, 104);border:none">Peanut Butter Moo'd</th>
+							</tr>
+							<tr>
+								<td colspan="2" style="background-color: rgb(255, 197, 96);border:none">
+									<ul>
+										<li>orange juice</li>
+										<li style="display: flex;"> </li>
+										<li style="display: flex;"> </li>
+										<li style="display: flex;"> </li>
+										<li>orange sherbet</li>
+										<li style="display: flex;"> </li>
+										<li style="display: flex;"> </li>
+										<li style="display: flex;"> </li>
+										<li>soymilk fat free vanilla frozen yogurt</li>
+										<li style="display: flex;"> </li>
+										<li style="display: flex;"> </li>
+										<li style="display: flex;"> </li>
+									</ul>
+									<a href="/" class="customize">CUSTOMIZED ORDER</a> <br />
+									<a href="/" class="order">ORDER</a>
+								</td>
+								<td style="background-color: rgb(161, 129, 75);border:none">
+									<ul>
+										<li>fat free vanilla frozen yogurt</li>
+										<li>soymilk chocolate moo'd dairy base</li>
+										<li>orange passion juice blend</li>
+										<li>bananas</li>
+										<li>peanut butter</li>
+									</ul>
+									<a href="/" class="customize">CUSTOMIZED ORDER</a> <br />
+									<a href="/" class="order">ORDER</a>
+								</td>
+							</tr>
+						</tbody>
+
+						<tbody class="secmnu5">
+							<tr>
+								<td rowspan="2"><center><img src="img/pbchocolate_smoothie.jpg "></center></td>
+								<th colspan="2" style="background-color: rgb(250, 241, 227);border: none">Pb Chocolate Love</th>
+								<td rowspan="2"><center><img src="img/pumpkinsmash_CLASSIC_smoothie.jpg "></center></td>
+								<th style="background-color: rgb(244, 177, 61);border:none">Pumpkin Smash Classic</th>
+							</tr>
+							<tr>
+								<td colspan="2" style="background-color: blanchedalmond;border:none">
+									<ul>
+										<li>chocolate moo'd dairy base</li>
+										<li>reduced fat milk</li>
+										<li>bananas</li>
+										<li>peanut butter</li>
+									</ul>
+									<a href="/" class="customize">CUSTOMIZED ORDER</a> <br />
+									<a href="/" class="order">ORDER</a>
+								</td>
+								<td style="background-color: rgb(236, 153, 11);border:none">
+									<ul>
+										<li>2% milk</li>
+										<li>pumpkin spice blend</li>
+										<li>fat free vanilla frozen yogurt</li>
+									</ul>
+									<a href="/" class="customize">CUSTOMIZED ORDER</a> <br />
+									<a href="/" class="order">ORDER</a>
+								</td>
+							</tr>
+						</tbody>
+
+						<tbody class="secmnu6">
+							<tr>
+								<td rowspan="2"><center><img src="img/razzmatazz.jpg "></center></td>
+								<th colspan="2" style="background-color: rgb(245, 139, 181);border:none">Razzmatazz</th>
+								<td rowspan="2"><center><img src="img/strawberrysurfrider_smoothie.jpg "></center></td>
+								<th style="background-color: rgb(238, 135, 97);border:none">Strawberry Surf Rider</th>
+							</tr>
+							<tr>
+								<td colspan="2" style="background-color: rgb(230, 60, 128);border:none">
+									<ul>
+										<li>grape pear berry juice blend</li>
+										<li>orange sherbet</li>
+										<li>strawberries</li>
+										<li>bananas</li>
+									</ul>
+									<a href="/" class="customize">CUSTOMIZED ORDER</a> <br />
+									<a href="/" class="order">ORDER</a>
+								</td>
+								<td style="background-color: rgb(208, 112, 77);border:none">
+									<ul>
+										<li>lemonade</li>
+										<li>lime sherbet</li>
+										<li>strawberries</li>
+										<li>peaches</li>
+									</ul>
+									<a href="/" class="customize">CUSTOMIZED ORDER</a> <br />
+									<a href="/" class="order">ORDER</a>
+								</td>
+							</tr>
+						</tbody>
+
+						<tbody class="secmnu7">
+							<tr>
+								<td rowspan="2"><center><img src="img/strawberry whirl.jpg "></center></td>
+								<th colspan="2" style="background-color: rgb(250, 117, 144);border:none"><center>Whirl's Famous! Strawberries Wild</center></th>
+								<td rowspan="2"><center><img src="img/whitegummi_smoothie.jpg "></center></td>
+								<th style="background-color: rgb(220, 162, 140);border:none">White Gummi</th>
+								
+							</tr>
+							<tr>
+								<td colspan="2" style="background-color: rgb(221, 121, 121);border:none">
+									<ul>
+										<li>fat free vanilla frozen yogurt</li>
+										<li style="display: flex;"> </li>
+										<li style="display: flex;"> </li>
+										<li style="display: flex;"> </li>
+										<li>strawberries</li>
+										<li style="display: flex;"> </li>
+										<li style="display: flex;"> </li>
+										<li style="display: flex;"> </li>
+										<li>bananas</li>
+										<li style="display: flex;"> </li>
+										<li style="display: flex;"> </li>
+										<li style="display: flex;"> </li>
+										<li style="display: flex;"> </li>
+										<li style="display: flex;"> </li>
+										<li style="display: flex;"> </li>
+									</ul>
+									<a href="/" class="customize">CUSTOMIZED ORDER</a> <br />
+									<a href="/" class="order">ORDER</a>
+								</td>
+								<td style="background-color: rgb(233, 145, 113);border:none">
+									<ul>
+										<li>white grape pear peach juice blend</li>
+										<li>pineapple sherbet</li>
+										<li>soymilk</li>
+										<li>lime sherbet</li>
+										<li>orange sherbet</li>
+										<li>mangos</li>
+										<li>raspberry sherbet</li>
+									</ul>
+									<a href="/" class="customize">CUSTOMIZED ORDER</a> <br />
+									<a href="/" class="order">ORDER</a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+			</div>
+		
+		</div>
+		<div class="footer">
+			<div id="flogo">Jamba</div>
+				<div class="footbar">
+					<center>
+						<a href="https://www.facebook.com/jambajuiceph/" class="fa fa-facebook" > </a> 
+						<a href="https://www.instagram.com/jambajuiceph/" class="fa fa-instagram"> </a>
+						<a href="https://twitter.com/JambaJuice/" class="fa fa-twitter" ></a> 
+					</center>
+				</div>
+		</div>
+	</body>
+</html>
