@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Thank you</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../css/nav.css">
+<link rel="stylesheet" type="text/css" href="../fonts/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<!--ICON-->
+<link rel="icon" type="image/png" href="../img/logo.ico" />
+
+<!--The Load Function is not supported to Chrome Browser, can be supported through localhost-->
+<script>
+    $(function () {
+        $("#header").load("header-nav.html");
+        $("#footer").load("footer.html");
+
+        document.getElementById("header").load("header-nav.html");
+        //window.location.load = "header-nav.html";
+    });
+</script>
+</head>
+<body>
+<!--The Load Function is not supported to Chrome Browser, can be supported through localhost-->
+<div id="header"></div>
+
+<div class="header-1">
+    <nav class="navbar">
+        <div id="wrapper">
+            <input id="nav-toggle" type="checkbox">
+            <a href="../index.html" id="logo">Jamba</a>
+            <ul class="links">
+                <li> <a href="../index.html">Home</a></li>
+                <li> <a href="../docs/about.html">About</a></li>
+                <li> <a href="../docs/contact.html">Contact Us</a></li>
+                <li> <a href="../docs/menu.html">MENU</a></li>
+                <li><a href='../docs/signupOrlogin.html'>SIGNUP/LOGIN</a></li>
+            </ul>
+            <label for="nav-toggle" class="icon-burger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </label>
+        </div>
+    </nav>
+</div>
+
+
+<div class="container">
+<h2>Thank you for your time. We value your voice and your time.</h2>
+<div class="alert alert-success alert-dismissible" id="myAlert">
+<a href="#" class="close">&times;</a>
+<strong>Your Inquiry had been sent!</strong> Thank you very much, and we hope you continue to enjoy our products and will contact you soon.
+</div>
+</div>
+
+<script>
+$(document).ready(function(){
+    $(".close").click(function(){
+        $("#myAlert").alert("close");
+        });
+    });
+</script>
+</body>
+</html>
+
+
