@@ -1,0 +1,367 @@
+html,body {
+    font-family: 'Roboto', cursive;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+    animation-duration: 0.001s;
+}
+
+
+
+.index-intro, .head-news, .index-categories{
+    position: relative;
+    left: 0; top: 0;
+    width: 100%;
+}
+
+.index-categories .table-responsive .tbmenu{
+    padding: 0;
+    overflow-x: hidden;
+    width: 100%;
+
+}
+
+.tbmenu {
+    position: absolute;
+    top: 20px;
+    left:10px;
+    width: 100%;
+    transition: ease all .5s;
+}
+
+.tbfront{
+    position: absolute;
+    top:20px;
+    transition: ease all .5s;
+    left:20px;
+    width: calc(75% - 20px);
+}
+
+.tbnews {
+    position: absolute;
+    top: 20px;
+    left:10px;
+    width: 100%;
+    transition: ease all .5s;
+}
+
+
+
+.tbmenu th{
+    position: absolute;
+    background: transparent;
+    background-color: aliceblue;
+    font-size: large;
+    padding: 1em;
+    border-radius: .5em;
+    border: 5px solid rgb(241, 238, 199);
+    border-spacing: 1cm 2em;
+    transition: ease all .5s;
+}
+
+
+
+.tbfront th{
+    transition: ease all .5s;
+    position: absolute;
+    padding: 3em;
+    border-radius: .5em;
+    background-color: aliceblue;
+    font-size: large;
+}
+
+.tbfront td{
+    transition: ease all .5s;
+    position: absolute;
+    box-shadow: none;
+}
+
+
+.index2-mnu .carousel-inner .item img{
+    width:100%;
+    height:480px;
+    width:900px
+}
+
+
+
+.tbnews th{
+    position: absolute;
+    background: transparent;
+    background-color: aliceblue;
+    font-size: large;
+    border-radius: .5em;
+    border: 5px solid rgb(241, 238, 199);
+    border-spacing: 1cm 2em;
+    transition: left 0.7s;
+}
+
+.tbnewsups .th, .tbnewsups .td ul li{
+    text-align: left;
+    overflow: hidden;
+    width: 100%;
+}
+
+.index-bg, .menu-banner{
+    position: relative;
+    background-position:center;
+	background-repeat: no-repeat;
+	background-size:cover;
+    background-attachment:fixed;
+    text-align: center;
+    width: 100%;
+}
+
+.menu-bg{
+    height: 430px;
+    width: 100%;
+    position: relative;
+	background-repeat: no-repeat;
+	background-size:contain;
+    background-attachment:fixed;
+}
+
+.index-categories{
+    margin-top: 25px;
+}
+
+.head-news{
+    padding: .6em;
+}
+
+.news td ul li a{
+    color:rgb(44, 44, 44);
+}
+
+.table-responsive{
+    width: 100%;
+    display:inline-flex;
+}
+
+.news .table-responsive ul li {
+    text-decoration: none;
+    list-style: none;
+    margin-top: 10px;
+    padding: .6em;
+    text-align: justify;
+}
+
+.news .table-responsive h2{
+    text-align: center;
+}
+
+.index2-mnu .container-fluid{
+    padding: 2em;
+}
+
+.index-intro h1{
+	padding: 6em;
+    overflow: hidden;
+}
+
+.index-intro p{
+    margin-left: 10px;
+    padding: 6em;
+    overflow: hidden;
+
+}
+
+.index-categories h2{
+    text-align: center;
+    width: 100%;
+}
+
+
+.index-categories-list{
+    text-align: center;
+    width: 100%;
+    display:inline-flex;
+}
+
+.index-categories-list h3{
+    text-align: center;
+	padding: 2em;
+    overflow: hidden;
+    width: 100%;
+}
+
+.index-categories-list div a{
+    background-color: antiquewhite;
+}
+
+/*Section Background Color*/
+.index2-mnu, .index-categories-list, .news {
+    background-color: bisque;
+}
+
+/*ABOUT PAGE*/
+
+.ab, .mission, .vision{
+    display: inline-flex;
+    width: 100%;
+}
+
+.desc, .desc2, .desc3{
+    padding: 2em;
+    font-size: 15px;
+    text-align:justify;
+}
+
+
+/*STYLESHEET FOR MENU PAGE*/
+
+@media screen and (max-width: 767px) {
+    .menu-intro .table-responsive {
+        width: 100%;
+        margin-bottom: 15px;
+        overflow-y: hidden;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+        border: 1px solid #ddd;
+        
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    .menu-intro .table-responsive{
+        padding: 14em !important;
+    }
+}
+
+.menu-intro .table-responsive {
+    display: block;
+}
+
+
+.menu-intro .table, .table-2, .table-3, .table-4, .table-5 {
+    width: 100%;
+    position: relative;
+    display:inline;
+    top: 0; bottom: 0; left: 0; right: 0;
+}
+
+.tbtitle, .menu-intro h1, .menu-iced, .menu-food, .menu-grab{
+    position: relative;
+    width: 100%;
+}
+
+.menu-intro h1, .menu-iced, .menu-food, .menu-grab{
+    text-align: center;
+    padding: 2em;
+    background: transparent;
+    background-color: aliceblue;
+    font-size: large;
+    border-radius: .5em;
+    border: 5px solid rgb(241, 238, 199);
+    border-spacing: 1cm 2em;
+    transition: left 0.7s;
+}
+
+.menu-iced, .menu-food, .menu-grab{
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.menu-intro .container {
+    position: relative;
+    display: block;
+    height: 400px;
+    width: 500px;
+    
+}
+
+.menu-intro .img-responsive {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.menu-intro .overlay {
+    background-color: #3a9bbc;
+}
+
+.overlay, .overlay-2, .overlay-3, .overlay-4, .overlay-5, .overlay-6, .overlay-7, .overlay-8, .overlay-9, .overlay-10,
+.overlay-11, .overlay-12, .overlay-13, .overlay-14 {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+}
+
+.container:hover .overlay, .container:hover .overlay-2, .container:hover .overlay-3, .container:hover .overlay-4,
+.container:hover .overlay-5,  .container:hover .overlay-6, .container:hover .overlay-7, .container:hover .overlay-8,
+.container:hover .overlay-9, .container:hover .overlay-10, .container:hover .overlay-11, .container:hover .overlay-12,
+.container:hover .overlay-13, .container:hover .overlay-14{
+    opacity: 1;
+}
+
+.desc-s, .desc-2, .desc-3, .desc-4, .desc-5, .desc-6, .desc-7, .desc-8, .desc-9, .desc-10, .desc-11, .desc-12,
+.desc-13, .desc-14{
+    color: white;
+    font-size: 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: left;
+}
+
+.overlay-2 {
+    background-color: rgb(255, 140, 157);
+}
+
+.overlay-3 {
+    background-color: rgb(255, 182, 222);
+}
+
+.overlay-4 {
+    background-color: rgb(255, 161, 134);
+}
+
+.overlay-5{
+    background-color: rgb(212, 156, 141);
+}
+
+.overlay-6{
+    background-color: rgb(246, 200, 137);
+}
+
+.overlay-7{
+    background-color: rgb(255, 197, 96);
+}
+
+.overlay-8{
+    background-color: rgb(161, 129, 75);
+}
+
+.overlay-9{
+    background-color: rgb(211, 197, 177);
+}
+
+.overlay-10{
+    background-color: rgb(236, 153, 11);
+}
+
+.overlay-11{
+    background-color: rgb(230, 60, 128);
+}
+
+.overlay-12{
+    background-color: rgb(208, 112, 77);
+}
+
+.overlay-13{
+    background-color: rgb(221, 121, 121);
+}
+
+.overlay-14{
+    background-color: rgb(233, 145, 113);
+}

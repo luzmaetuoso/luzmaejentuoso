@@ -1,0 +1,149 @@
+
+.social .container-fluid{
+    background-color: rgb(226, 228, 230);
+    position: relative;
+    display:inline-flex;
+    text-align: center;
+    width: 100%;
+    padding: 2em;
+}
+
+.social .container-fluid #flogo {
+    font-size:70px;
+    background: -webkit-linear-gradient(#f1a99c, #8ff1de);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    list-style: none;
+    text-decoration: none;
+    margin-top: 70px;
+    padding: .1em;
+    float: left;
+    /*padding: .5em;
+    float: left;
+    margin-left: 10px;*/
+}
+
+.social .container-fluid .footbar-1{
+    /*display: block;
+    display: inline-block;*/
+    padding: 3em;
+    width:100%;
+	box-sizing: border-box;
+    overflow: hidden;
+    clear: both;
+}
+
+.social .container-fluid .footbar-2{
+    /*padding: .5em;
+    display: inline-block;
+    float: right;*/
+    margin-top:50px;
+    width: 30%;
+    overflow: hidden;
+    clear: both;
+}
+
+.social .container-fluid p{
+    text-align: center;
+}
+
+
+button .form__button {
+    font-size: 30px;
+    display: block;
+    
+}
+
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 40px;
+    border-radius: 560px;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom:5px;
+    padding:10px 10px;
+    font-size: medium;
+    vertical-align:baseline;
+}
+
+.icons{
+    display: inline;
+    align-items:baseline;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.fa-instagram {
+    background: -webkit-linear-gradient(#fa1c78, #dbff3c);
+    color: white;
+}
+
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+
+
+.footer .container-fluid {
+    background-color: rgb(210, 234, 226);
+    width: 100%;
+    padding: .5em;
+    height: 8%;
+    display: inline-flex;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.footer .container-fluid p, .footer .container-fluid a{
+    padding: 21px;
+    text-align: center;
+}
+
+
+/*.footer .container-fluid p{
+    margin-left: 460px;
+}*/
+
+@media screen and (max-width:1070px) {
+    .social{
+        display: flex;
+        width: 100%;
+    }
+    #flogo{
+        margin-left: 90px;
+    }
+    .social .container-fluid, .social .footbar-2{
+        display: block;
+    }
+    .social .footbar-2{
+        margin-left: 160px;
+    }
+
+
+    .footer {
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 20%;
+        margin-top: 11px;
+        display: inline-block;
+    }
+    .footer p, .footer a{
+        text-align: center;
+        margin-left: 10px;
+        padding: auto;
+        
+    }
+}
