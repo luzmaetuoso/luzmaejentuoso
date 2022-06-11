@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>HOME</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <meta name="robots" content="noindex, follow">
+
+    <!--ICON-->
+    <link rel="icon" type="image/png" href="img/logo.ico" />
+
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css'>
+        <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css'>
+        
+        <link rel="stylesheet" href="css/nav.css">   
+        <link rel="stylesheet" href="css/body.css">
+        <link rel="stylesheet" href="css/media-query.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/footer-style.css">
+        <link rel="stylesheet" type="text/css" href="fonts/font-awesome.min.css">
+
+        <script src="js/jquery.js"></script>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous">
+    </script>
+    <script>
+        $(function () {
+            $("#header").load("header-nav.html");
+            $("#footer").load("footer.html");
+        });
+    </script>
+
+    <style>
+        
+        th{
+            text-align:center;
+        }
+        td ul{
+            list-style: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!--The Load Function is not supported to Chrome Browser, can be supported through localhost-->
+    <!--<div id="header"></div>-->
+
+    <div class="header-1">
+        <nav class="navbar">
+            <div id="wrapper">
+                <input id="nav-toggle" type="checkbox">
+                <a href="index.html" id="logo">Jamba</a>
+                <ul class="links">
+                    <li> <a href="index.html">Home</a></li>
+                    <li> <a href="docs/about.html">About</a></li>
+                    <li> <a href="docs/contact.html">Contact Us</a></li>
+                    <li> <a href="docs/menu.html">MENU</a></li>
+                    <li><a href='docs/signupOrLogin.html'>SIGNUP/LOGIN</a></li>
+                </ul>
+                <label for="nav-toggle" class="icon-burger">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </label>
+            </div>
+        </nav>
+    </div>
+
+    <div class="header-2">
+        <nav class="navbar-2">
+            <a href="#menu">Our Menu</a>
+            <a href="#newsroom">Recent New from Jamba</a>
+        </nav>
+    </div>
+    <!--Remaining section-->
+    <div class="wrapper">
+        <section class="index-intro">
+            <!--<h1>THIS IS INTRODUCTION</h1>
+                <p>SAMPLE NOT THE DESCRIPTION</p>-->
+            <img src="img/frontcover.jpg" class="index-bg"></i>
+            <div class="table-responsive" id="wrapper">
+                <table class="tbfront">
+                    <tr>
+                        <th>Learn more about this product here</th>
+                        <td><form><button type="submit" class="form__button button submit" onclick="window.location.href='menu.html'">CLICK
+                                HERE</button></form></td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+    </div>
+
+    <section class="index2-mnu">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6">
+                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                        <li data-target="#myCarousel" data-slide-to="3"></li>
+                        <li data-target="#myCarousel" data-slide-to="4"></li>
+                        </ol>
+                
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner">
+                
+                            <div class="item active">
+                                <img src="img/classic.jpg">
+    
+                            </div>
+                
+                            <div class="item">
+                                <img src="img/img_9923.jpg">
+                            </div>
+                            
+                            <div class="item">
+                                <img src="img/public.jpg">
+                                
+                            </div>
+    
+                            <div class="item">
+                                <img src="img/publicw2.jpg">
+                                
+                            </div>
+    
+                            <div class="item">
+                                <img src="img/jamba_menu.jpg">
+                                
+                            </div>
+                        </div>
+                
+                        <!-- Left and right controls -->
+                        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left"></span>
+                        <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right"></span>
+                        <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>            
+            </div>
+        </div>
+    </section>
+
+
+    <a name="menu"></a>
+    <section class="index-categories">
+        <img src="img/jambaproduct.jpg" class="menu-bg"></i>
+        <div class="table-responsive">
+            <table class="tbmenu" id="tbm">
+                <tr style="display:inline">
+                    <th>
+                        <h2 class="font-custom">OUR</h2> MENU
+                    </th>
+                </tr>
+            </table>
+        </div>
+
+        <div class="index-categories-list">
+            <div class="mnu1">
+                <h3><a href="docs/menu.html#smoothies">SMOOTHIES</a></h3>
+            </div>
+            <div>
+                <h3><a href="docs/menu.html#iced-beverage">ICED BEVERAGE</a></h3>
+            </div>
+            <div>
+                <h3><a href="docs/menu.html#food">FOOD</a></h3>
+            </div>
+            <div>
+                <h3><a href="docs/menu.html#grabgo">GRAB N' GO</a></h3>
+            </div>
+        </div>
+    </section>
+
+    <a name="newsroom"></a>
+    <section class="head-news">
+        <img src="img/jamba_banner.jpg" class="menu-banner"></i>
+        <div class="table-responsive">
+            <table class="tbnews">
+                <tr>
+                    <th>
+                        <h2>Newsroom</h2>
+                    </th>
+                </tr>
+            </table>
+        </div>
+
+        <div class="news">
+            <div class="container-fluid">
+                <div class="table-responsive">
+                    <table class="tbnewsups">
+                        <tr>
+                            <th>
+                                <h2>Recent Newsroom</h2>
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <ul>
+                                    <li><a href="#">January 04, 2022: Jamba Helps Jumpstart Wellness Journeys with New
+                                            Plant-Based Smoothie, 'The Go Getter'</a></li> <br />
+                                    <li><a href="#">August 10, 2021: Jamba Partners with Award Winning Actress, Singer
+                                            and Matcha Fanatic Asley Tisdale to Introduce Two New Iced Bevarages</a>
+                                    </li> <br />
+                                    <li><a href="#">November 10,2020: Jamba introduces two new kids smoothies, inspired
+                                            by the new DreamWorks animation film, The Croods: A New Age</a></li> <br />
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                    <table class="tbupdates">
+                        <tr>
+                            <th>
+                                <h2>Updates</h2>
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <ul>
+                                    <li><a href="#">Jamba Juice Offers Energy-Packed Products for Fall</a></li> <br />
+                                    <li><a href="#">Our Commitment During COVID-19</a></li> <br />
+                                    <li><a href="#">Say Hello to Your 'Bestie Summer Ever' at Jamba with the Return of
+                                            Watermelon Breeze and Summer Blackberry - Plus Deals and Giveaways All
+                                            Season Long</a></li> <br />
+                                    <li><a href="#">Industy-wide supply chain shortages</a></li> <br />
+                                    <li><a href="#">Jamba launches new breakfast items perfect for those looking to
+                                            renew morning routines - featuring new impossible handwich</a></li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="../vendor/jquery/bootstrap.min.js"></script>
+    <script src="../js/main.js"></script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+
+        <section class="social">
+            <div class="container-fluid">
+                <div href="index.html" id="flogo">Jamba</div>
+                <div class="footbar-1">
+                    <h3 class="font-custom">Delivery</h3>
+                    <p>Let Jamba come to you – wherever you are.<br>Get our Whirld Famous smoothies, juices, and bowls 
+                        delivered in just a few clicks.</p>
+                        <form>
+							<button class="form__button button submit" href="../docs/menu.html">ORDER NOW</button>
+						</form>
+                </div>
+                <div class="footbar-2">
+                    <h3 class="font-custom">Stay</h3> <h3 class="font-default">connected</h3>
+                    <div class="icons">
+                        <a href="https://www.facebook.com/jambajuiceph/" class="fa fa-facebook" > </a> 
+                        <a href="https://www.instagram.com/jambajuiceph/" class="fa fa-instagram"> </a>
+                        <a href="https://twitter.com/JambaJuice/" class="fa fa-twitter" ></a> 
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <div class="footer"> 
+            <div class="container-fluid">
+                <p>Copyright 2022 © Jamba Juice LLC. All rights reserved.</p>
+                <a href="#">legal</a>
+                <a href="#">privacy</a>
+            </div>
+        </div>
+
+    <!--Can run or Supported only on Localhost-->
+    <div id="footer"></div>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+</body>
+
+</html>
